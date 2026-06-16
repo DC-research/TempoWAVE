@@ -1,0 +1,14 @@
+[
+  {
+    "dataset": "AUL",
+    "text": "<|im_start|>system\nYou are a specialized language model trained for context-aware time-series forecasting.<|im_end|>\n<|im_start|>user\nHistorical time-series values: -<|digit_0|>.<|digit_5|><|digit_0|><|digit_0|><|digit_0|>, -<|digit_0|>.<|digit_1|><|digit_6|><|digit_6|><|digit_7|>, <|digit_0|>.<|digit_1|><|digit_6|><|digit_6|><|digit_7|>, <|digit_0|>.<|digit_5|><|digit_0|><|digit_0|><|digit_0|>\n\nPlease predict the following sequence carefully. Predict the next 2 values and return only those values.<|im_end|>\n<|im_start|>assistant\n",
+    "input": "1.0,2.0,3.0,4.0",
+    "output": "5.0,6.0",
+    "normalization": {
+      "kind": "affine",
+      "offset": 1.0,
+      "scale": 3.0,
+      "normalized_offset": -0.5
+    }
+  }
+]

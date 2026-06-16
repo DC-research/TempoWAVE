@@ -1,0 +1,4 @@
+{
+  "description": "TempoWAVE forecasting template for Qwen2.5 Instruct.",
+  "prompt_input": "<|im_start|>system\nYou are a specialized language model trained for context-aware time-series forecasting.<|im_end|>\n<|im_start|>user\n{input}\n\n{instruction}<|im_end|>\n<|im_start|>assistant\n"
+}

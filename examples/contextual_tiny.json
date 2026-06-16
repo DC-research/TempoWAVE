@@ -1,0 +1,32 @@
+[
+  {
+    "split": "train",
+    "dataset": "AUL",
+    "history": [-0.5, -0.25, 0.0, 0.25],
+    "target": [0.4, 0.5],
+    "situational_context": "Region VIC; historical date 2021-05-12; prediction date 2021-05-13.",
+    "catch22": {
+      "CO_f1ecac": 2.0
+    }
+  },
+  {
+    "split": "val",
+    "dataset": "AUL",
+    "history": [-0.4, -0.2, 0.1, 0.3],
+    "target": [0.45, 0.5],
+    "situational_context": "Region VIC; weekday; 30 minutes per point.",
+    "catch22": {
+      "CO_f1ecac": 2.1
+    }
+  },
+  {
+    "split": "test",
+    "dataset": "AUL",
+    "history": [-0.3, -0.1, 0.2, 0.4],
+    "target": [0.45, 0.5],
+    "situational_context": "Region VIC; weekday; 30 minutes per point.",
+    "catch22": {
+      "CO_f1ecac": 2.2
+    }
+  }
+]
