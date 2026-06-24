@@ -1,0 +1,7 @@
+[
+  {
+    "text": "<|im_start|>system\nYou are a specialized language model trained for context-aware time-series forecasting.<|im_end|>\n<|im_start|>user\nHistorical time-series values: -<|digit_0|>.<|digit_5|><|digit_0|><|digit_0|><|digit_0|>, <|digit_0|>.<|digit_5|><|digit_0|><|digit_0|><|digit_0|>\n\nPlease predict the following sequence carefully. Return only the next 2 values.<|im_end|>\n<|im_start|>assistant\n<|digit_0|>.<|digit_7|><|digit_5|><|digit_0|><|digit_0|>, <|digit_1|>.<|digit_0|><|digit_0|><|digit_0|><|digit_0|><|im_end|>\n",
+    "input": "1.0,2.0",
+    "output": "2.5,3.0"
+  }
+]

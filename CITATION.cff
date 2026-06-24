@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use TempoWAVE, please cite the accompanying paper."
+title: "Speaking Numbers to LLMs: Multi-Wavelet Number Embeddings for Time Series Forecasting"
+authors:
+  - family-names: "Lei"
+    given-names: "Zijie"
+repository-code: "https://github.com/DC-research/TempoWAVE"
+date-released: "2026-05-25"
+license: "MIT"
+version: "0.1.0"
+preferred-citation:
+  type: article
+  title: "Speaking Numbers to LLMs: Multi-Wavelet Number Embeddings for Time Series Forecasting"
+  authors:
+    - family-names: "Lei"
+      given-names: "Zijie"
+  year: 2026

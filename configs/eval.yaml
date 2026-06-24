@@ -1,0 +1,12 @@
+model_path: "outputs/sft/Qwen2.5-1.5B-Instruct_tempowave"
+input_file: "data/processed/eval/eval.json"
+hist_len: 48
+pred_len: 48
+integer_precision: 1
+fractional_precision: 4
+do_sample: false
+temperature: 1.0
+top_p: 1.0
+top_k: 50
+seed: 42
+invalid_policy: "error"

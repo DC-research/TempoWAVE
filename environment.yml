@@ -1,0 +1,27 @@
+name: tempowave
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.12
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - pip
+  - pip:
+      - transformers
+      - datasets
+      - trl
+      - unsloth
+      - unsloth_zoo
+      - xformers
+      - bitsandbytes
+      - peft
+      - accelerate
+      - huggingface_hub
+      - numpy
+      - tqdm
+      - pyyaml
+      - pycatch22
+      - ruff
