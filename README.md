@@ -1,12 +1,53 @@
+<div align="center">
+
 # TempoWAVE
 
-Official code pipeline for **Speaking Numbers to LLMs: Multi-Wavelet Number
-Embeddings for Time Series Forecasting**.
+### Speaking Numbers to LLMs: Multi-Wavelet Number Embeddings for Time Series Forecasting
+
+Defu Cao<sup>1*</sup>, Zijie Lei<sup>1*,2</sup>, Muyan Weng<sup>1</sup>, Jiao Sun<sup>1,3</sup>, Yan Liu<sup>1</sup>
+
+<sup>1</sup>University of Southern California &nbsp;·&nbsp; <sup>2</sup>Meta &nbsp;·&nbsp; <sup>3</sup>Google DeepMind
+
+<sub><sup>*</sup> Equal contribution.</sub>
+
+<em>IJCAI–ECAI 2026</em>
+
+[![Paper](https://img.shields.io/badge/arXiv-2606.26487-b31b1b.svg)](https://arxiv.org/abs/2606.26487)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Melady%2FTempoWAVE-yellow)](https://huggingface.co/Melady/TempoWAVE)
+[![GitHub](https://img.shields.io/badge/GitHub-DC--research%2FTempoWAVE-181717.svg?logo=github)](https://github.com/DC-research/TempoWAVE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+</div>
+
+---
 
 TempoWAVE gives an LLM a numerically grounded digit interface. Each decimal
 digit is routed through one of ten dedicated tokenizer tokens and initialized
 from a multi-wavelet, multi-scale codebook. Text, signs, decimal points, and
 separators continue to use the base model's standard embeddings.
+
+> **TL;DR.** The discrete, language-oriented token interface of LLMs is
+> misaligned with continuous numerical values, which harms numerical ordering
+> and forecasting reliability. TempoWAVE is a plug-and-play temporal wavelet
+> digit interface that maps each scalar observation into digit-wise embeddings
+> built from multi-wavelet, multi-scale coefficients. By directly overriding
+> standard token representations, it exposes both fine-grained local
+> fluctuations and macro global structure in a transformer-compatible form,
+> achieving a new state of the art across five context-enriched forecasting
+> benchmarks.
+
+<div align="center">
+<img src="assets/IJCAI2026.jpg" alt="Overview of the TempoWAVE forecasting framework" width="95%">
+<p><em>Overview of the TempoWAVE-based forecasting framework. The input prompt is tokenized once with a tokenizer augmented with dedicated digit tokens. Text and context tokens use standard embeddings, while digit tokens are routed to the TempoWAVE module, which constructs digit embeddings via multi-wavelet, multi-scale coefficients and overrides the corresponding token embeddings. The resulting sequence is fed into an unchanged LLM backbone trained via supervised fine-tuning (SFT). Generated numeric tokens are parsed, de-normalized, and evaluated as real-valued forecasts.</em></p>
+</div>
+
+## Links
+
+| Resource | Link |
+| --- | --- |
+| 📄 Paper | [arXiv:2606.26487](https://arxiv.org/abs/2606.26487) · [PDF](https://arxiv.org/pdf/2606.26487) |
+| 🤗 Model | [Melady/TempoWAVE](https://huggingface.co/Melady/TempoWAVE) |
+| 💻 Code | [DC-research/TempoWAVE](https://github.com/DC-research/TempoWAVE) |
 
 ## Paper Method
 
@@ -181,3 +222,20 @@ bash -n training/continuous_pretrain.sh
 bash -n training/finetune.sh
 bash -n evaluation/run_eval.sh
 ```
+
+## Citation
+
+If you use TempoWAVE, please cite our paper:
+
+```bibtex
+@inproceedings{cao2026tempowave,
+  title     = {Speaking Numbers to {LLM}s: Multi-Wavelet Number Embeddings for Time Series Forecasting},
+  author    = {Cao, Defu and Lei, Zijie and Weng, Muyan and Sun, Jiao and Liu, Yan},
+  booktitle = {Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-ECAI)},
+  year      = {2026}
+}
+```
+
+## License
+
+Released under the [MIT License](LICENSE).
